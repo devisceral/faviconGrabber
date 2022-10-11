@@ -26,7 +26,9 @@ function startIt(){
     if (mySize == "default"){
       const h1 = "https://";
       const h2 = "http://";
-      
+      if(myUrl.charAt(myUrl.length - 1)=="/"){
+        myUrl=myUrl.substring(0,myUrl.length-1);
+    }
       myUrl = myUrl.replace(h1, "");
       myUrl = myUrl.replace(h2, "");
       myImg.src = duckApi + myUrl + ".ico";
